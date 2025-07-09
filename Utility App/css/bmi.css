@@ -1,0 +1,43 @@
+body {
+  background-color: #0d1117;
+  font-family: 'Segoe UI', sans-serif;
+  color: #00ffcc;
+  text-align: center;
+  padding: 20px;
+}
+
+.bmi-container {
+  background-color: #1f1f1f;
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 0 20px #00ffcc55;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  background: #0d1117;
+  color: #00ffcc;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: 2px solid #00ffcc;
+  background: #0d1117;
+  color: #00ffcc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00ffcc;
+  color: #0d1117;
+  box-shadow: 0 0 10px #00ffcc88;
+}

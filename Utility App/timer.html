@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown Timer</title> <link rel="stylesheet" href="css/timer.css">
+    <script>
+        let countdown;
+        function startTimer() {
+            const seconds = parseInt(document.getElementById("seconds").value);
+            const display = document.getElementById("time");
+            clearInterval(countdown);
+            let timeLeft = seconds;
+
+            countdown = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    display.textContent = "Time's up!";
+                } else {
+                    display.textContent = timeLeft + " seconds remaining";
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+
+    <label>Enter seconds:</label><br>
+    <input type="number" id="seconds"><br><br>
+    <button onclick="startTimer()">Start</button><br><br>
+    <div id="time"></div>
+
+    <br>
+    <a href="index.html">Back to Home</a>
+</body>
+</html>

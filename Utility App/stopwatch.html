@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title><link rel="stylesheet" href="css/stopwatch.css">
+    <script>
+        let startTime, timerInterval;
+        let running = false;
+
+        function startStopwatch() {
+            if (running) return;
+            running = true;
+            startTime = Date.now();
+            timerInterval = setInterval(() => {
+                const elapsed = Date.now() - startTime;
+                document.getElementById("display").textContent = (elapsed / 1000).toFixed(1) + " seconds";
+            }, 100);
+        }
+
+        function stopStopwatch() {
+            running = false;
+            clearInterval(timerInterval);
+        }
+
+        function resetStopwatch() {
+            stopStopwatch();
+            document.getElementById("display").textContent = "0.0 seconds";
+        }
+    </script>
+</head>
+<body>
+    <h1>Stopwatch</h1>
+
+    <div id="display">0.0 seconds</div><br>
+
+    <button onclick="startStopwatch()">Start</button>
+    <button onclick="stopStopwatch()">Stop</button>
+    <button onclick="resetStopwatch()">Reset</button>
+
+    <br><br>
+    <a href="index.html">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* === General Page Styling === */
+body {
+  background-color: #0d1117;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+/* === Header === */
+h1 {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+  margin-bottom: 20px;
+}
+
+/* === Calculator Container === */
+.calculator {
+  background-color: #1f1f1f;
+  border: 2px solid #00ffcc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ffcc44;
+}
+
+/* === Display Field === */
+input {
+  width: 100%;
+  font-size: 2rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: right;
+  border: none;
+  background-color: #222;
+  color: #00ffcc;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #00ffcc55;
+}
+
+/* === Buttons Grid === */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  justify-content: center;
+}
+
+/* === Individual Button Styling === */
+button {
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  margin: 0;
+  background-color: #111;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #00ffcc55;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* === Button Press Animation === */
+button:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 20px #00ffccaa;
+}
+
+/* === Full-Width Clear Button === */
+button[style*="span"] {
+  grid-column: span 4;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Clock</title>   <link rel="stylesheet" href="css/clock.css">
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            document.getElementById("clock").textContent = time;
+        }
+
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+    </script>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <h2 id="clock">Loading...</h2>
+    <a href="index.html">Back to Home</a>
+</body>
+</html>
